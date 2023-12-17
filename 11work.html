@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>события</title>
+</head>
+<body id="bod">
+    <header id="header" onmouseover="header.style.color='white'" onmouseout="header.style.color='black'">
+        <div id="text" >
+        Котики
+        </div>
+    <div class="button">
+        <button id="btn1">Убрать текст</button>
+        <button id="btn2">Вернуть текст</button>
+    </div>
+    </header>
+<script>
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let img = document.getElementById("bod");
+    
+    btn1.addEventListener("click", function() {
+        text.style.display = 'none';
+    });
+    
+    btn2.addEventListener("click", function() {
+        text.style.display = 'block';
+    });
+
+    img.addEventListener("keyup", function() {
+        if (event.code  === 'KeyZ') {
+            bod.style.background='white';
+        }
+    });
+
+    img.addEventListener("keydown", function() {
+        if (event.code === 'KeyA') {
+            bod.style.background='black';
+        }
+    });    
+</script>
+</body>
+</html>
